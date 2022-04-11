@@ -5,7 +5,7 @@ use App\Http\Controllers\tasksController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('tasks.index');
 });
 
 Route::resource('/task', tasksController::class);

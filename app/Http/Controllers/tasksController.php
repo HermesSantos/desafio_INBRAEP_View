@@ -10,7 +10,7 @@ class TasksController extends Controller
     public function index()
     {
         $Tasks = Task::all();
-      return view ('tasks.index')->with('Tasks', $Tasks);
+      return view ('tasks.index')->with('tasks', $Tasks);
     }
 
     
@@ -56,4 +56,4 @@ class TasksController extends Controller
         Task::destroy($id);
         return redirect('task')->with('flash_message', 'Task deleted!');  
     }
-}
+}   
